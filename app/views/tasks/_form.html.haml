@@ -1,0 +1,18 @@
+= form_for @task do |f|
+  - if @task.errors.any?
+    %div
+      %ul
+        - @task.errors.full_messages.each do |msg|
+          %li= msg
+  %div
+    %p
+      = f.label :title
+    %p
+      = f.text_field :title, {class: "form-control"}
+  %div
+    %p
+      = f.label :description
+    %p
+      = f.text_area :description, {class: "form-control"}
+  %p
+    = f.submit
