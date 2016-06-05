@@ -11,7 +11,7 @@ class TaskFlowTest < ActionDispatch::IntegrationTest
     assert_select "h1", "Tasks"
   end
 
-  test "can create an article" do
+  test "can create an task" do
     get "/tasks/new"
     assert_response :success
 
