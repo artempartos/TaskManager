@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title= 'TaskManager'
+    = stylesheet_link_tag 'application'
+  %body
+    %header{class: 'navbar navbar-inverse navbar-fixed-top', role: 'navigation'}
+      %div{class: 'navbar-inner'}
+        %div{class: 'container'}
+          %div{class: 'navbar-header'}
+            %a{class: 'navbar-brand', href: '/'}
+              TaskManager
+    %div{class: 'container master-container'}
+      - if notice
+        %div{class: 'alert alert-success fade in', 'data-alert': 'alert'}
+          %a{class: 'close', 'data-dismiss': 'alert', href: '#'}
+            ×
+          %p
+            = notice
+
+      = yield
+
+    %footer{class: 'footer'}
+      %div{class: 'container'}
+
+    = javascript_include_tag 'application'
+
