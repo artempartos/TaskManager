@@ -28,6 +28,7 @@ gem 'pg'
 gem 'factory_girl'
 gem 'simple_form'
 gem 'coveralls', require: false
+gem 'state_machines-activerecord'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
