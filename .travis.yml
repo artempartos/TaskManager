@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 2.3.0
+before_install: gem install bundler -v 1.10.5
+services:
+  - postgresql
+before_script:
+  - psql -c "CREATE USER taskmanager WITH PASSWORD 'asdzxc';" -U postgres
+  - psql -c 'create database "taskmanager_development" owner "taskmanager";' -U postgres
+env:
+- TESTFOLDER=./
+script:
+    - bundle exec rake db:schema:load
+    - bundle exec rake test
