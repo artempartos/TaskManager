@@ -1,2 +1,4 @@
 {<img src="https://coveralls.io/repos/github/nmorozov/TaskManager/badge.svg?branch=master" alt="Coverage Status" />}[https://coveralls.io/github/nmorozov/TaskManager?branch=master]
+{<img src="https://travis-ci.org/nmorozov/TaskManager.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/nmorozov/TaskManager]
+
 Task Manager
