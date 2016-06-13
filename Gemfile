@@ -27,7 +27,6 @@ gem 'haml'
 gem 'pg'
 gem 'factory_girl'
 gem 'simple_form'
-gem 'simplecov', :require => false, :group => :test
 gem 'coveralls', require: false
 
 # Use ActiveModel has_secure_password
