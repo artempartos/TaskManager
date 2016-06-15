@@ -20,6 +20,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
 
     if @task.save
+      flash[:success] = "New task has been created!"
       redirect_to @task
     else
       render 'new'
@@ -30,6 +31,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
 
     if @task.update(task_params)
+      flash[:success] = "Task has been updated!"
       redirect_to @task
     else
       render 'edit'
@@ -40,6 +42,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.destroy
 
+    flash[:success] = "Task has been deleted!"
     redirect_to tasks_path
   end
 
