@@ -4,11 +4,11 @@ class Task < ActiveRecord::Base
   validates :description, presence: true
 
   state_machine initial: :inactive do
-    event :active do
+    event :activate do
       transition inactive: :active
     end
 
-    event :inactive do
+    event :deactivate do
       transition active: :inactive
     end
   end
