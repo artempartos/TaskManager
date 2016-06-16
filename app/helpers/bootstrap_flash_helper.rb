@@ -8,9 +8,17 @@ module BootstrapFlashHelper
       next if message.blank?
 
       type = type.to_sym
-      type = :success if type == :notice
-      type = :danger  if type == :alert
-      type = :danger  if type == :error
+
+      case type
+        when :notice
+          type = :success
+        when :alert
+          type = :danger
+        when :error
+          type = :danger
+        else
+      end
+
       next unless ALERT_TYPES.include?(type)
 
       tag_class = options.extract!(:class)[:class]
